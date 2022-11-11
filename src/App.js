@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from "./components/Card/Card";
+import Navbar from "./components/Navbar/Navbar";
+import NewCard from "./components/NewCard/NewCard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+     <Navbar title="Comision 13i" bgStyle="bg-primary" />
+     <div className="container d-flex align-items-center justify-content-center flex-column mt-5">
+      <Card alumno="Leandro" info="Informacion del alumno" nota={6} />
+      <Card alumno="Melisa" info="Informacion del alumno"/>
+      <NewCard />
+     </div>
+    </>
   );
 }
 
